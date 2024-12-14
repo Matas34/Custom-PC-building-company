@@ -1,0 +1,4 @@
+BEGIN
+Add GPU nvidia 4090 24GB
+Add CPU AMD ryzen5 5.0GHz
+END

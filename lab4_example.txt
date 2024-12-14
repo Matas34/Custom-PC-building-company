@@ -1,0 +1,20 @@
+command <- interpreter $ add "CPU AMD ryzen5 5GHz"
+command <- interpreter $ search "CPU AMD ryzen5 5GHz"
+command <- interpreter $ add "GPU nvidia 4090 24GB"
+command <- interpreter $ showBuild
+command <- interpreter $ save
+
+Visible in the (client) terminal:
+
+Component added successfully.
+This component is in the build.
+Component added successfully.
+State (PC (Components [GPUComponent (GPU (Brand "nvidia") (Model "4090") (Vram 24)),CPUComponent (CPU (Brand "AMD") (Model "ryzen5") (Speed 5.0))]))
+State saved successfully
+
+Saved in the text file:
+
+BEGIN
+Add GPU nvidia 4090 24GB
+Add CPU AMD ryzen5 5.0GHz
+END

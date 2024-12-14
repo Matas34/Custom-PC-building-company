@@ -1,0 +1,43 @@
+Welcome! Press [TAB] for auto completion, type ':paste' for multiline input
+>>> Add CPU intel i9 6GHz
+Component added successfully.
+>>> Add GPU nvidia 4090 24GB
+Component added successfully.
+>>> ShowBuild
+State (PC (Components [GPUComponent (GPU (Brand "nvidia") (Model "4090") (Vram 24)),CPUComponent (CPU (Brand "intel") (Model "i9") (Speed 6.0))]))
+>>> Save
+State saved successfully
+>>> Load
+State loaded and applied successfully
+>>> ShowBuild
+State (PC (Components [CPUComponent (CPU (Brand "intel") (Model "i9") (Speed 6.0)),GPUComponent (GPU (Brand "nvidia") (Model "4090") (Vram 24))]))
+>>> :paste
+-- Entering multi-line mode. Press <Ctrl-D> to finish.
+| BEGIN
+| Add PSU corsair 500W
+| Add Case somebrand ATX
+| END
+| 
+Batch completed successfully
+>>> ShowBuild
+State (PC (Components [CaseComponent (Case (Brand "somebrand") (FormFactor "ATX")),PSUComponent (PSU (Brand "corsair") (Wattage 500)),CPUComponent (CPU (Brand "intel") (Model "i9") (Speed 6.0)),GPUComponent (GPU (Brand "nvidia") (Model "4090") (Vram 24))]))
+>>> :paste
+-- Entering multi-line mode. Press <Ctrl-D> to finish.
+| BEGIN
+| Remove CPU intel i9 6GHz
+| Add CPU amd ryzen5 5GHz
+| END
+| 
+Batch completed successfully
+>>> ShowBuild
+State (PC (Components [CPUComponent (CPU (Brand "amd") (Model "ryzen5") (Speed 5.0)),CaseComponent (Case (Brand "somebrand") (FormFactor "ATX")),PSUComponent (PSU (Brand "corsair") (Wattage 500)),GPUComponent (GPU (Brand "nvidia") (Model "4090") (Vram 24))]))
+>>> Save
+State saved successfully
+>>> 
+[1]+  Stopped                 stack run fp2024-three --allow-different-user
+root@1ec8118f1481:/workspaces/Haskell# stack run fp2024-three --allow-different-user
+Welcome! Press [TAB] for auto completion, type ':paste' for multiline input
+>>> Load
+State loaded and applied successfully
+>>> ShowBuild
+State (PC (Components [GPUComponent (GPU (Brand "nvidia") (Model "4090") (Vram 24)),PSUComponent (PSU (Brand "corsair") (Wattage 500)),CaseComponent (Case (Brand "somebrand") (FormFactor "ATX")),CPUComponent (CPU (Brand "amd") (Model "ryzen5") (Speed 5.0))]))

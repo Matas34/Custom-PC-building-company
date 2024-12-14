@@ -1,0 +1,34 @@
+<pc>         ::= "[" <components> "]"
+<components> ::= <component> | <component> <components>
+<component>  ::= "CPU" <cpu> | "GPU" <gpu> | "MB" <motherboard> | "RAM" <ram> | "Storage" <storage> | "PSU" <psu> | "Case" <case> | "PC" <pc>
+<cpu>        ::= <brand> <model> <speed>
+<gpu>        ::= <brand> <model> <vram>
+<motherboard> ::= <brand> <socket>
+<ram>        ::= <brand> <DDR> <capacity> <speed>
+<storage>    ::= <brand> <type> <capacity>
+<psu>        ::= <brand> <wattage>
+<case>       ::= <brand> <form_factor>
+<brand>      ::= <string>
+<model>      ::= <string>
+<speed>      ::= <number> "GHz" | <number> "MHz"
+<vram>       ::= <number> "GB"
+<socket>     ::= "LGA1700" | "LGA1200" | "AM4" | "AM5" 
+<capacity>   ::= <number> "GB" | <number> "TB"
+<type>       ::= "SSD" | "HDD"
+<wattage>    ::= <number> "W"
+<form_factor> ::= "ATX" | "Micro-ATX"
+<DDR>        ::= "DDR4" | "DDR5" | "DDR6"
+<string>     ::= <char_seq>
+<char_seq>   ::= <char> | <char> <char_seq>
+<char>       ::= "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" 
+               | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" 
+               | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M"
+               | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" 
+               | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | " " | "-" | "_"
+<number>     ::= <digit> | <digit> <number>
+<digit>      ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+<operation>  ::= "Add" <component>
+                | "Remove" <component>
+                | "Search" <component>
+                | "Compare" <component> <component>
+                | "ShowBuild"
